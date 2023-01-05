@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta charset="utf-8">
+        <title>Kauppa</title>
+        <link rel="icon" type="image/x-icon" href="Kuvat/kauppaIcon.jpg">
+        <link rel="stylesheet" type="text/css" href="otaYhteytta.css"/>
+        <!-- animaatiot css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <!---Notifikaatiot-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.css">
+        <!--jQueryn lataaminen notifikaatioita varten-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+
+        <div class="header">
+            <div class="zoom-box">
+                <h1> <a href="index.html">Kauppa</a></h1>
+            </div>
+        </div>
+
+        <div class="linkit">
+                
+            <li><a href="index.html">Etusivu ⌂</a></li>
+            <li><a href="tuotteet.html">Tuotteet</a></li>
+            <li><a href="ostoskori.html">Ostoskori</a></li>
+            <li><a href="otaYhteytta.html">Ota Yhteyttä</a></li>
+            
+        </div>
+
+        <div class="TekstiKentta">
+
+            <div class="TekstiOtsikko">
+                <h3>Ota Yhteyttä</h3>
+            </div>
+            
+            <div class="TekstiSisalto">
+                <div class ="lomake">
+
+                  <label for="etunimi">Etunimi</label>
+                  <input id="etunimi" type="text">
+              
+                  <label for="sukunimi">Sukunimi</label>
+                  <input id="sukunimi" type="text">
+              
+                  <label for="otsikko">Otsikko</label>
+                  <input id="otsikko" type="text">
+              
+                  <label for="viesti">Viesti</label>
+                  <br/>
+                  <textarea id="viesti" name="viesti" placeholder="Kirjoita jotakin..." ></textarea>
+                  <br>
+                  <input type="submit" value="Lähetä" onclick="notifikaatio();">
+
+                </div>
+            </div>
+              
+             
+            
+        </div>
+        <div id="footer">
+            &copy; Tomi Viisanen
+        </div>
+        
+        <script src="otaYhteytta.js"></script> 
+        <!---Notifikaatiot-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.css">
+        <!--jQueryn lataaminen notifikaatioita varten-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>   
+    </body>
+</html>

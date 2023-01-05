@@ -1,0 +1,289 @@
+body {
+    
+    width: 960px;
+    margin: auto;
+    background: url("https://picsum.photos/1920/1080/?random");
+    opacity: 100%;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.9;
+    
+}
+
+.header {
+
+    padding: auto;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 30px;
+    width: 940px;
+    text-align: center;
+    background: rgb(255, 255, 255); 
+    background: rgba(233, 230, 70, 0.63);
+    height: 160px;
+    border: 10px solid black;
+    font-size: 30px;
+    border-radius: 20px;
+    opacity: 0.9;
+}
+
+.header:hover{
+    
+    animation: pulse; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 3s; 
+}
+
+.linkit {
+    display: inline-block;
+    vertical-align: top;
+    margin-top:1px;
+    width: 940px;
+    text-align: center;
+    background: rgb(0, 0, 0); 
+    background: rgba(161, 209, 241, 0.63);
+    height: 35px;
+    border: 10px solid black;
+    font-size: 30px;
+    border-radius: 20px;
+}
+
+
+.linkit li {
+
+    display: inline-table;
+    float: left;
+    
+}
+
+.linkit a:link, #linkit a:visited {
+
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color:#000000;
+    line-height: 30px;
+    width: 229px;
+    border: 3px solid black;
+    box-shadow: 4px 4px 4px #fff;
+    background-color: #e5e39a;
+   
+}
+
+.linkit a:hover {
+    background-color: rgb(0, 0, 0);
+    transform: rotate(-5deg);
+    transition: 1s;
+    border-radius: 20px;
+    animation: heartBeat; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 5s; 
+}
+
+
+a {
+     color: #000000;
+     text-decoration: none;
+} 
+
+a:hover {
+    color:rgba(233, 230, 70, 0.63);
+    text-decoration:none; 
+    cursor:pointer;  
+}
+
+.header a:hover{
+   
+    color:rgb(255, 234, 0);
+
+}
+
+
+.zoom-box {
+   
+    transition: transform .9s; /* Animation */
+    cursor:pointer; 
+   
+    
+}
+
+.zoom-box:hover {
+    transform: scale(1.6);
+}
+
+/*Teksti Pohja*/
+
+.TekstiKentta {
+
+    margin-top: 15px;
+    width: 960px;
+    height: 800px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 25px 40px #00000033;
+    border: 3px solid black;
+}
+
+.TekstiOtsikko{
+    
+    margin: auto;
+    width: 955px;
+    height: 70px;
+    border: 3px solid black;
+    border-radius: 20px;
+    text-decoration: underline;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    color: #2F3841;
+    text-align: center;
+   
+    
+}
+
+.TekstiSisalto{
+
+    width: 900px;
+    text-align: left;
+    margin: 30px;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    border-radius: 20px;
+    box-shadow: 0px 25px 40px #00000033;
+    border: 3px solid black;
+    
+    
+}
+
+#footer{
+
+    background: rgb(255, 255, 255); 
+    background: rgba(159, 180, 219, 0.5);
+    height: 40px;
+    font-size: 30px;
+    min-height: auto;
+    overflow: auto;
+    text-align: center;
+    margin-top: 30px;
+    border: 8px solid black;
+    width: 944px;
+    
+  
+  }
+
+.button {
+
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-right: 200px;
+  height: 50px;
+  width: 220px;
+  text-align:center;
+  border: 3px solid black;
+  border-width: 7px ;
+  border-radius: 200px;
+  background-color: rgb(0, 255, 0);
+  font-size: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  color: #202020;
+  cursor: pointer;
+  
+}
+.button:hover{
+
+    animation: pulse; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 3s; 
+}
+
+ /*Videon popup ikkuna*/
+.overlay {
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 300ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 1000px;
+    height: 670px;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+  }
+  .popup .content {
+    max-height: 100%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 960px){
+    .box{
+      width: 100%;
+    }
+    .popup{
+      width: 100%;
+    }
+}
+  
+.TekstiPopup{
+    margin-left: 2px;
+    margin-top: 15px;
+    width: 950px;
+    height: 600px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 25px 40px #00000033;
+    border: 3px solid black;
+    color: #000000;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+  
+input[type=text] {
+    
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+  

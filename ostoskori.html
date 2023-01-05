@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta charset="utf-8">
+        <title>Kauppa</title>
+        <link rel="icon" type="image/x-icon" href="Kuvat/kauppaIcon.jpg">
+        <link rel="stylesheet" type="text/css" href="ostoskori.css"/>
+        <!--animaatioiden käyttöönotto-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <!---Notifikaatiot-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.css">
+        <!--jQueryn lataaminen notifikaatioita varten-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    </head>
+
+    <body onload="updateCart()">
+
+        <div class="header">
+            <div class="zoom-box">
+                <h1> <a href="index.html">Kauppa</a></h1>
+            </div>
+        </div>
+
+        <div class="linkit">
+                
+            <li><a href="index.html">Etusivu ⌂</a></li>
+            <li><a href="tuotteet.html">Tuotteet</a></li>
+            <li><a href="ostoskori.html">Ostoskori</a></li>
+            <li><a href="otaYhteytta.html">Ota Yhteyttä</a></li>
+            
+        </div>
+        
+
+        <div class="OstoskoriKentta">
+            
+
+            <div class="OstoksetOtsikko">
+                <h3>Ostoskori</h3>
+            </div>
+
+            <div class="OstoskoriToinenOtsikko">
+                <div class="column1">Nimi</div>
+                <div class="column2">Hinta</div>
+                <div class="column3">Määrä</div>
+            </div>
+    
+            <div class="cart">
+                <button class="tyhjenna" onclick="tyhjennakaikki(); notifikaatio(); { setTimeout(convert, 1000);}  ;">Tyhjennä ostoskori</button>
+                <div class="KoriSisalto">
+                <!-- Renderöityy valitut tuotteet korinlataus.js tiedostosta -->
+                </div>
+
+
+                    <div class="cart-footer">
+                        <div class="subtotal">Yhteensä (0 tuotetta): 0€ </div>
+                        
+                        <div class="total-items-in-cart"></div>
+
+                        <div class="maksa">
+                            <a href="#popup1">Siirry maksamaan</a>
+                        </div>
+                        
+                    </div>
+
+                    <div id="popup1" class="overlay">
+                        <div class="popup">
+                            <h2>Maksuvahvistus</h2>
+                            <a class="close" href="#">&times;</a>
+                            <div class="content">
+                                <form class="TekstiSisalto">
+                                   
+                                      <label for="etunimi">Etunimi</label>
+                                      <input id="etunimi" type="text">
+                                  
+                                      <label for="sukunimi">Sukunimi</label>
+                                      <input id="sukunimi" type="text">
+                                  
+                                      <label for="otsikko">Osoite</label>
+                                      <input id="otsikko" type="text">
+
+                                      <label for="otsikko">Kaupunki</label>
+                                      <input id="otsikko" type="text">
+
+                                      <label for="otsikko">Pankkikortin numero</label>
+                                      <input id="otsikko" type="text">
+
+                                      <label for="otsikko">Kortin turvakoodi</label>
+                                      <input id="otsikko" type="text">
+                                  
+                                      <input type="submit" value="Lähetä" onclick="notifikaatio2();">
+                    
+                                
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+       
+
+        <div id="footer">
+            &copy; Tomi Viisanen
+        </div>
+
+        <script src="ostoskori.js"></script> 
+        <script src="korinlataus.js"></script>   
+         <!---Notifikaatiot-->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.css">
+         <!--jQueryn lataaminen notifikaatioita varten-->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>                                                   
+    </body>
+    
+</html>

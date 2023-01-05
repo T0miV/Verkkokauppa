@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta charset="utf-8">
+        <title>Kauppa</title>
+        <link rel="icon" type="image/x-icon" href="Kuvat/kauppaIcon.jpg">
+        <link rel="stylesheet" type="text/css" href="etusivu.css"/>
+          
+        <!-- animaatiot css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        
+    </head>
+
+    <body>
+
+        <div class="header">
+            <div class="zoom-box">
+                <h1> <a href="index.html">Kauppa</a></h1>
+            </div>
+        </div>
+
+        <div class="linkit">
+            <li><a href="index.html">Etusivu ⌂</a></li>
+            <li><a href="tuotteet.html">Tuotteet</a></li>
+            <li><a href="ostoskori.html">Ostoskori</a></li>
+            <li><a href="otaYhteytta.html">Ota Yhteyttä</a></li>
+        </div>
+
+        <div class="TekstiKentta">
+
+            <div class="TekstiOtsikko">
+                <h3>Tietoa yrityksestä</h3>
+            </div>
+            
+            <div class="TekstiSisalto">
+                <p>Tämä yritys on erikoistunut erilaisten tavaroiden myyntiin. Tällä hetkellä myymme noin 5 erilaista tuotetta.
+                    Tuotteilla ei ole palautusoikeutta. Toimipisteemme sijaitsee Mikkelissä.
+                </p>
+                <!--Hakee rajapinnasta tietoa koirasta-->
+                <button class="button" onclick="haeKoira();">Hae tietoa koirista</button>
+                <h4 style="color: rgb(0, 0, 0)"; id = "viesti";></h4>
+                <!--Hakee random kuvan lorem picsum sivulta-->
+                <button class="button" onclick="haeKuva();">Hae random kuva</button>
+                <div class="kuva">
+                    <img id = 'kuva' />
+                </div>
+                
+                <!--Tulostaa popupin jossa on youtube video-->
+                <div class="button">
+                    <a href="#popup1">Katso video</a>
+                </div>
+            </div>
+
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h2>Video</h2>
+                    <a class="close" href="#">&times;</a>
+                    <div class="content">
+                        <form class="TekstiPopup">
+                            <br>
+                            <iframe width="945" height="545"
+                            src="https://www.youtube.com/embed/L_LUpnjgPso">
+                            </iframe> 
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+                
+        </div>
+
+        
+        <div id="footer">
+            &copy; Tomi Viisanen
+        </div>
+       
+        <script src="etusivu.js"></script>     
+    </body>
+</html>
